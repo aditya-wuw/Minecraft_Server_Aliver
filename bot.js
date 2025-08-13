@@ -1,6 +1,5 @@
-console.log("MiniCrafter...(online)");
+console.log("bot is starting.....")
 import mineflayer from "mineflayer";
-
 const bot = mineflayer.createBot({
   host: "Zordiee.aternos.me",
   port: 29047,
@@ -10,6 +9,7 @@ const bot = mineflayer.createBot({
 });
 
 bot.on("spawn", () => {
+  console.log("MiniCrafter is online ....");
   bot.chat("I'm Online");
 });
 
