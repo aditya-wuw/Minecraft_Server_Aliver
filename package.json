@@ -1,0 +1,16 @@
+{
+  "name": "mcsa",
+  "version": "1.0.0",
+  "description": "Keeps Aternos minecraft server alive ",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "bot": "nodemon bot.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mineflayer": "^4.31.0",
+    "nodemon": "^3.1.10"
+  }
+}
