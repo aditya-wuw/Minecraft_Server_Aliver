@@ -1,8 +1,11 @@
+import 'dotenv/config'
+
 console.log("bot is starting.....")
+
 import mineflayer from "mineflayer";
 const bot = mineflayer.createBot({
-  host: "Zordiee.aternos.me",
-  port: 29047,
+  host: process.env.IP,
+  port: process.env.PORT ,
   username: "MiniCrafter",
   auth: "offline",
   version: "1.21.4",
