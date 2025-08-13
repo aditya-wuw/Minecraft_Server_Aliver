@@ -14,11 +14,19 @@ const bot = mineflayer.createBot({
 bot.on("spawn", () => {
   console.log("MiniCrafter is online ....");
   bot.chat("I'm Online");
+  bot.setControlState('forward',true)
 });
 
+bot.on("playerJoined",(p)=>{
+  if(p.username === bot.username) return
+  else{
+    bot.chat(`welcome back ${p.username}, it's been a while`)
+  }
+})
 bot.on("chat", (username, message) => {
   if (username === bot.username) return;
   const message_lower = message.toLowerCase();
+  if (!message_lower.includes(bot.username.toLowerCase())) return;
   const healthChecker = ["how are you", "are you ok", "are yoy ok"];
   if (healthChecker.some((checker) => message_lower.includes(checker))) {
     bot.chat("Yeah I'm Fine");
